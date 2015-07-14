@@ -47,7 +47,7 @@ class Blog extends CI_Controller {
 
 	protected  function getlist()
 	{
-		$list = $this->Blog_m->get_all_list();
+		$list = $this->Blog_m->get_all_list();	
 		return $list;
 	}
 

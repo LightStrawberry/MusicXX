@@ -18,6 +18,7 @@ class Article_m extends CI_Model{
 	}
 
 	public function get_all_list(){
+		$this->db->order_by("id", "desc"); 
 		$query=$this->db->get('posts');
 		return $query->result();
 	}

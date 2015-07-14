@@ -37,7 +37,7 @@
 <script type="text/javascript" src="static/js/hotkeys.js"></script>
 <script type="text/javascript" src="static/js/uploader.js"></script>
 <script type="text/javascript" src="static/js/simditor.js"></script>
-<script type="text/javascript" src="static/js/page-demo.js"></script>
+<script type="text/javascript" src="static/js/text.js"></script>
     
 <footer>
 	&copy; <a href="http://sqruo.com">Betta</a>
