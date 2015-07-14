@@ -15,14 +15,14 @@ class Blog extends CI_Controller {
 	public function index()
 	{
 		$data['list']=$this->getlist();
-		$data['fuck']="xxxx";
 		$this->load->view('blog',$data);
-		//var_dump($data);
 	}
 
-	public function post()
+	public function posts()
 	{
-
+		$data['article'] = $this->get_Article_info();
+		//var_dump($data);
+		$this->load->view('posts',$data);
 	}
 
 	public function login()
@@ -45,11 +45,15 @@ class Blog extends CI_Controller {
 		$this->load->view('login');
 	}
 
-
-
 	protected  function getlist()
 	{
 		$list = $this->Blog_m->get_all_list();
 		return $list;
+	}
+
+	protected function get_Article_info(){
+		$showId=$this->uri->segment(3);
+		$showArr=$this->article_m->get_id_article($showId);
+		return $showArr;
 	}
 }

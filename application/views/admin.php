@@ -2,12 +2,18 @@
 
 	<head>
 		<title>萌萌的后台</title>
+		<base href="<?php  echo base_url();?>">
 	</head>
 	<body>
-		<form action="Admin/create_article" method="post" id="article">
-			title:<input type="text" name="title"><br />
-			<input type="submit" value="提交">
-		</form>
-		content:<textarea rows="10" cols="30" form="article" name="content"></textarea><br/>
+		<div class="wrapper">
+			<p>文章：</p>
+			<?php foreach ($all_list as $row):?>
+				<p>标题：<?php echo $row->title;?></p>
+				<p>时间：<?php echo $row->time;?></p>
+				<a href="Admin/delete_article/<?php echo $row->id;?>">删除</a>
+				<a href="Admin/update/<?php echo $row->id;?>">更新</a>
+				<br/>
+			<?php endforeach ?>
+	</div>
 	</body>
 </html>

@@ -56,7 +56,7 @@
                         <a href="about.html">关于</a>
                     </li>
                     <li>
-                        <a href="post.html">博文</a>
+                        <a href="<?php echo base_url()."/blog";?>">博客</a>
                     </li>
                     <li>
                         <a href="contact.html">勾搭我</a>
@@ -90,15 +90,15 @@
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <?php foreach ($list as $row):?>
                 <div class="post-preview">
-                    <a href="post.html">
+                    <a href="<?php echo 'blog/posts/'.$row['id'];?>"
                         <h2 class="post-title">
                             <?php echo $row['title'];?>
                         </h2>
                         <h3 class="post-subtitle">
-                            <?php echo $row['content'];?>
+                            <?php echo mb_substr($row['content'],0,64,'utf-8')."...";?>
                         </h3>
                     </a>
-                    <p class="post-meta">Posted by <a href="#">Start Bootstrap</a> on September 24, 2014</p>
+                    <p class="post-meta">Posted by <a href="#">betta</a> on <?php echo $row['time'];?></p>
                 </div>
                 <hr>
                 <?php endforeach ?>
