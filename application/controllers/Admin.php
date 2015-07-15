@@ -20,6 +20,9 @@ class Admin extends CI_Controller {
 		{
 			$this->load->view('admin',$data);
 		}
+		else{
+			$this->load->view("errors");
+		}
 	}
 
 	public function create()
