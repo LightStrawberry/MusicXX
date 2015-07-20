@@ -22,6 +22,7 @@ $(document).ready(function () {
             lrc = "no";
         }
     });
+    m_play();
     oAudio.volume = 0.5;
 });
 

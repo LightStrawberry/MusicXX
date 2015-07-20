@@ -19,8 +19,8 @@ class Upload extends CI_Controller {
   $config['upload_path'] = 'static/uploads/';
   $config['allowed_types'] = 'gif|jpg|png';
   $config['max_size'] = '2048';
-  $config['max_width']  = '1024';
-  $config['max_height']  = '768';
+  $config['max_width']  = '1920';
+  $config['max_height']  = '12000';
   $config['file_name']  = time();
 
   $this->upload->initialize($config);
@@ -33,9 +33,20 @@ class Upload extends CI_Controller {
   } 
   else
   {
-   $data = array('upload_data' => $this->upload->data());
-   
-   $this->load->view('upload_success', $data);
+    $a = array('upload_data' => $this->upload->data());
+    foreach ($a as $row)
+    {
+      $b = $row['file_path'];
+      $a = $row['file_name'];
+    }
+    //var_dump($a);
+    
+    $res = array(
+      "success" => true,
+      "msg" => "error",
+      "file_path" => "$b"."$a");
+      //var_dump($res);
+    echo json_encode($res);
   }
  } 
 }

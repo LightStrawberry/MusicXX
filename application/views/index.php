@@ -8,20 +8,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-
+    <base href="<?php  echo base_url()."static/";?>"/>
     <title>BETTA | home</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="static/css/grayscale.css" rel="stylesheet">
+    <link href="css/grayscale.css" rel="stylesheet">
+    <link href="css/music.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
-    <link href="static/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-
+    
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -52,8 +53,9 @@
                     <li class="hidden">
                         <a href="#page-top"></a>
                     </li>
+
                     <li>
-                        <a class="page-scroll" href="blog">Blog</a>
+                        <a class="page-scroll" href="<?php  echo base_url()."blog";?>">Blog</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#about">About</a>
@@ -72,7 +74,7 @@
     </nav>
 
     <!-- Intro Header -->
-    <header class="intro">
+    <header class="intro" class="container content-section text-center">
         <div class="intro-body">
             <div class="container">
                 <div class="row">
@@ -91,24 +93,45 @@
 
     <!-- About Section -->
     <section id="about" class="container content-section text-center">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
-                <h2>Something about me</h2>
-                <p>I like playing basketball. I like reading. I like music. I also like BoardGame. CARZY GAMEBOY ! i got so much   <a href="http://startbootstrap.com/template-overviews/grayscale/">the preview page</a>. The theme is open source, and you can use it for any purpose, personal or commercial.</p>
-                <p>This theme features stock photos by <a href="http://gratisography.com/">Gratisography</a> along with a custom Google Maps skin courtesy of <a href="http://snazzymaps.com/">Snazzy Maps</a>.</p>
-                <p>Grayscale includes full HTML, CSS, and custom JavaScript files along with LESS files for easy customization.</p>
+        <class="about-section">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <h2>Something about me</h2>
+                    <p>When the Last of The Flock Falls, The Game is Over. Forever.
+                    <p>I am a indie Gamemaker i am <a href="http://www.sqruo.com/">betta</a> I also like basketball. like music. like flim. like read and soon on...</p>
+                    <p>Never give up. find the next boom in the world.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Download Section -->
+    <!-- Music Section -->
     <section id="music" class="content-section text-center">
-        <div class="download-section">
-            <div class="container">
+        <div class="music-section">
+            <div class="container1">
                 <div class="col-lg-8 col-lg-offset-2">
-                    <h2>Download Grayscale</h2>
-                    <p>You can download Grayscale for free on the preview page at Start Bootstrap.</p>
-                    <a href="http://startbootstrap.com/template-overviews/grayscale/" class="btn btn-default btn-lg">Visit Download Page</a>
+                    <h1>music</h1>
+                    <div class="back">
+                        <div class="container">
+                            <div class="player">
+                                <div id="cd" class="cd">
+                                    <div class="out">
+                                    </div>
+                                    <div id="album" class="album"  onClick="javascript:m_play()">
+                                    </div>
+                                    <div id="in" class="in">
+                                    </div>
+                                </div>
+                                <div class="info">
+                                    <span id="music_name"></span><span id="artist"></span>
+                                </div>
+                                <div id="lrc" class="lrc">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <audio id="player">
+                    </audio>
                 </div>
             </div>
         </div>
@@ -118,16 +141,17 @@
     <section id="contact" class="container content-section text-center">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
-                <h2>Contact Start Bootstrap</h2>
-                <p>Feel free to email us to provide some feedback on our templates, give us suggestions for new templates and themes, or to just say hello!</p>
-                <p><a href="mailto:feedback@startbootstrap.com">feedback@startbootstrap.com</a>
+                <h2>Contact Me</h2>
+                <p>Indie games are changing the world, one giant pixel at a time. If you can. contact with me.
+                <p>Let's go !</p>
+                <p><a href="mailto:betta0801@gmail.com">betta0801@gmail.com</a>
                 </p>
                 <ul class="list-inline banner-social-buttons">
                     <li>
-                        <a href="https://twitter.com/SBootstrap" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
+                        <a href="http://www.weibo.com/2306700572/" class="btn btn-default btn-lg"><i class="fa fa-weibo fa-fw"></i> <span class="network-name">Twitter</span></a>
                     </li>
                     <li>
-                        <a href="https://github.com/IronSummitMedia/startbootstrap" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
+                        <a href="https://github.com/LightStrawberry" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
                     </li>
                     <li>
                         <a href="https://plus.google.com/+Startbootstrap/posts" class="btn btn-default btn-lg"><i class="fa fa-google-plus fa-fw"></i> <span class="network-name">Google+</span></a>
@@ -137,8 +161,8 @@
         </div>
     </section>
 
-    <!-- Map Section -->
-    <div id="map"></div>
+    <div id="map">
+    </div>
 
     <!-- Footer -->
     <footer>
@@ -148,19 +172,17 @@
     </footer>
 
     <!-- jQuery -->
-    <script src="static/js/jquery.js"></script>
+    <script src="js/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="static/js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
 
     <!-- Plugin JavaScript -->
-    <script src="static/js/jquery.easing.min.js"></script>
-
-    <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
-    <!--<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script>-->
+    <script src="js/jquery.easing.min.js"></script>
 
     <!-- Custom Theme JavaScript -->
-    <script src="static/js/grayscale.js"></script>
+    <script src="js/grayscale.js"></script>
+    <script src="js/player.js" type="text/javascript"></script>
 
 </body>
 

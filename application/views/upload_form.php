@@ -7,7 +7,6 @@
 <?php echo $error;?>
 
 <?php echo form_open_multipart('upload/do_upload');?>
-<img src="<?php echo base_url()."static/uploads/12.jpg";?>">
 <input type="file" name="userfile" size="20" />
 
 <br /><br />
