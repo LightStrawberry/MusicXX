@@ -3,7 +3,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Blog extends CI_Controller {
 
-
 	public function __construct()
 	{
 		parent::__construct();
@@ -14,7 +13,10 @@ class Blog extends CI_Controller {
 
 	public function index()
 	{
-		$data['list']=$this->getlist();
+		$list_id = 0;
+		$data['list']=$this->getlist($list_id);
+		$data['Nextid']=2;
+		$data['Lastid']=1;
 		$this->load->view('blog',$data);
 	}
 
@@ -23,6 +25,29 @@ class Blog extends CI_Controller {
 		$data['article'] = $this->get_Article_info();
 		//var_dump($data);
 		$this->load->view('posts',$data);
+	}
+
+	public function get($id)
+	{
+		$list_id = $id - 1;
+		$data['list'] = $this->getlist($list_id);
+		$data['Nextid'] = $list_id + 2; 
+		$data['Lastid'] = $list_id; 
+		$this->load->view('blog',$data);
+	}
+
+	public function page()
+	{
+		$showId=$this->uri->segment(3);
+		if($showId == 0)
+		{
+			$id = 1;
+		}else{
+			$id = $showId;
+		}
+		//echo $showId;
+		//echo $id;
+		$this->get($id);
 	}
 
 	public function login()
@@ -45,9 +70,9 @@ class Blog extends CI_Controller {
 		$this->load->view('login');
 	}
 
-	protected  function getlist()
-	{
-		$list = $this->Blog_m->get_ten_list();	
+	protected  function getlist($id)
+	{	
+		$list = $this->Blog_m->get_some_list($id);	
 		return $list;
 	}
 

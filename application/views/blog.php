@@ -50,16 +50,16 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a href="<?php echo base_url();?>">主页</a>
+                        <a href="<?php echo base_url();?>">堂室</a>
                     </li>
                     <li>
-                        <a href="about.html">关于</a>
+                        <a href="about.html">里房</a>
                     </li>
                     <li>
-                        <a href="<?php echo base_url()."/blog";?>">博客</a>
+                        <a href="<?php echo base_url()."blog";?>">书屋</a>
                     </li>
                     <li>
-                        <a href="contact.html">勾搭我</a>
+                        <a href="contact.html">床帘</a>
                     </li>
                 </ul>
             </div>
@@ -104,8 +104,11 @@
                 <?php endforeach ?>
                 <!-- Pager -->
                 <ul class="pager">
+                    <li class="last">
+                        <a href="blog/page/<?php echo $Lastid;?>" style="float: left;">前卷</a>
+                    </li>
                     <li class="next">
-                        <a href="#">Older Posts &rarr;</a>
+                        <a href="blog/page/<?php echo $Nextid;?>">后文</a>
                     </li>
                 </ul>
             </div>

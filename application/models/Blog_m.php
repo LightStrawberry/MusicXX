@@ -14,13 +14,13 @@ class Blog_m extends CI_Model{
 
 	public function get_all_list(){
 		$this->db->order_by("id", "desc"); 
-		$query=$this->db->get('posts');
+		$query = $this->db->get('posts');
 		return $query->result_array();
 	}
 
-	public function get_ten_list(){
-		$sql = "select * from posts order by id desc limit 10";
-		$query = $this->db->query($sql);
+	public function get_some_list($id){
+		$sql = "select * from posts order by id desc limit ?,10";
+		$query = $this->db->query($sql, array($id*10));
 		return $query->result_array();
 	}
 }
