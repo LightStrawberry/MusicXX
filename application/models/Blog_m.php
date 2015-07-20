@@ -18,5 +18,12 @@ class Blog_m extends CI_Model{
 		return $query->result_array();
 	}
 
+	public function get_ten_list(){
+		$sql = "select * from posts order by id limit 10";
+		$query = $this->db->query($sql);
+		$a = $query->result_array();
+		var_dump($a);
+		die('111');
+	}
 }
 ?>

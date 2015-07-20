@@ -6,6 +6,7 @@
 	</head>
 	<body>
 		<div class="wrapper">
+			<a href="Admin/create">新建文章</a>
 			<p>文章：</p>
 			<?php foreach ($all_list as $row):?>
 				<p>标题：<?php echo $row->title;?></p>
