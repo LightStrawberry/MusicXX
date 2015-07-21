@@ -10,7 +10,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Clean Blog - Sample Post</title>
+    <title>详情</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="static/css/bootstrap.min.css" rel="stylesheet">
@@ -52,16 +52,16 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a href="<?php echo base_url()."/blog"?>">主页</a>
+                        <a href="<?php echo base_url()."index"?>">堂室</a>
                     </li>
                     <li>
-                        <a href="about.html">关于</a>
+                        <a href="<?php echo base_url()."about"?>">里房</a>
                     </li>
                     <li>
-                        <a href="post.html">博客</a>
+                        <a href="<?php echo base_url()."blog"?>">书屋</a>
                     </li>
                     <li>
-                        <a href="contact.html">勾搭我</a>
+                        <a href="contact.html">床尾</a>
                     </li>
                 </ul>
             </div>

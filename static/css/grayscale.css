@@ -261,6 +261,10 @@ a:focus {
     padding-top: 100px;
 }
 
+#music{
+    padding-top: 200px !important;
+}
+
 .music-section {
     width: 100%;
     padding: 50px 0;
@@ -292,7 +296,7 @@ a:focus {
 
 @media(min-width:767px) {
     .content-section {
-        padding-top: 250px;
+        padding-top: 300px;
     }
 
     .download-section {
@@ -382,3 +386,4 @@ img::-moz-selection {
 body {
     webkit-tap-highlight-color: rgba(255,255,255,.2);
 }
+

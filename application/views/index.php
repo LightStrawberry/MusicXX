@@ -108,11 +108,11 @@
     <!-- Music Section -->
     <section id="music" class="content-section text-center">
         <div class="music-section">
-            <div class="container1">
+            <div class="container">
                 <div class="col-lg-8 col-lg-offset-2">
                     <h1>music</h1>
                     <div class="back">
-                        <div class="container">
+                        <div class="container1">
                             <div class="player">
                                 <div id="cd" class="cd">
                                     <div class="out">

@@ -59,7 +59,7 @@
                         <a href="<?php echo base_url()."blog";?>">书屋</a>
                     </li>
                     <li>
-                        <a href="contact.html">床帘</a>
+                        <a href="contact.html">床尾</a>
                     </li>
                 </ul>
             </div>

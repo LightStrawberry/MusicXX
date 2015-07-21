@@ -21,7 +21,7 @@ class Admin extends CI_Controller {
 			$this->load->view('admin',$data);
 		}
 		else{
-			$this->load->view("errors");
+			$this->load->view("404");
 		}
 	}
 
