@@ -265,6 +265,15 @@ a:focus {
     padding-top: 200px !important;
 }
 
+#contact{
+    background: url(../img/contact-bg.jpg) no-repeat center center scroll;
+    background-color: #000;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
 .music-section {
     width: 100%;
     padding: 50px 0;

@@ -25,7 +25,7 @@ class Upload extends CI_Controller {
 
   $this->upload->initialize($config);
  
-  if ( ! $this->upload->do_upload())
+  if ( ! $this->upload->do_upload("fileData"))
   {
    $error = array('error' => $this->upload->display_errors());
    
@@ -34,19 +34,20 @@ class Upload extends CI_Controller {
   else
   {
     $a = array('upload_data' => $this->upload->data());
+
     foreach ($a as $row)
     {
-      $b = $row['file_path'];
       $a = $row['file_name'];
     }
     //var_dump($a);
     
+
     $res = array(
       "success" => true,
       "msg" => "error",
-      "file_path" => "$b"."$a");
+      "file_path" => "http://localhost/MusicXX/static/uploads/"."$a");
       //var_dump($res);
-    echo json_encode($res);
+      echo json_encode($res);
   }
  } 
 }

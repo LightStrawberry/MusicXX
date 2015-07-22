@@ -1,11 +1,12 @@
 <html>
 
 	<head>
-		<title>萌萌的后台</title>
+		<title>躺着睡觉</title>
 		<base href="<?php  echo base_url();?>">
+		<link href="static/css/admin.css" rel="stylesheet">
 	</head>
 	<body>
-		<div class="wrapper">
+		<div id="wrapper">
 			<a href="Admin/create">新建文章</a>
 			<p>文章：</p>
 			<?php foreach ($all_list as $row):?>

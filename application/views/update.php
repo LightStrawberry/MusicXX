@@ -8,7 +8,7 @@
     <base href="<?php  echo base_url();?>">
 
 
-    <link media="all" rel="stylesheet" type="text/css" href="static/css/admin.css" />
+    <link media="all" rel="stylesheet" type="text/css" href="static/css/create.css" />
     <link media="all" rel="stylesheet" type="text/css" href="static/css/simditor.css" />
 
     <script type="text/javascript" src="static/js/jquery.min.js"></script>
