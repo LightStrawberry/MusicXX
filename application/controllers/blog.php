@@ -31,7 +31,7 @@ class Blog extends CI_Controller {
 	{
 		$list_id = $id - 1;
 		$data['list'] = $this->getlist($list_id);
-		$data['Nextid'] = $list_id + 2; 
+		$data['Nextid'] = $list_id + 2;
 		$data['Lastid'] = $list_id; 
 		$this->load->view('blog',$data);
 	}
